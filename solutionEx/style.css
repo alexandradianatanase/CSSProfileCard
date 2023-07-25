@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+
+/* Folosit pentru a declara variabile globale */
+:root {
+  --light-blue: #1c9eff ;
+  --dark-blue: #007ad6;
+  --btn-yellow: #ffd01a ;
+  --btn-hover-yellow: #efb10a;
+  --btn-active-yellow: #e8a200;
+  --light-grey: #f2f2f2;
+  --grey: #a0a0a0;
+  --pink: #ff9eaa;
+}
+
+body {
+  background: linear-gradient(to bottom right, #fff,var(--pink));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 360px;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card .banner {
+  background: url('https://images.pexels.com/photos/2726046/pexels-photo-2726046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.card .banner .imgBox {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  transform: translateY(50%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card .banner .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .banner .imgBox:hover {
+  transform: translateY(50%) scale(1.2);
+}
+
+.card .card-body {
+  padding: 100px 30px 40px;
+  position: relative;
+}
+
+.card .card-body .menu {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.card .card-body .menu:hover {
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+
+.card .name {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.card .title {
+  text-align: center;
+  padding-bottom: 20px;
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.card .actions {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.card .actions .follow-info {
+  display: flex;
+    justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.card .actions .follow-info h2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card .actions .follow-info h2 span {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+.card .actions .follow-info h2:hover {
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+
+.card .actions .follow-info h2:hover span {
+  color: var(--dark-blue);
+}
+
+.card .actions .follow-info h2 small {
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.card .actions button {
+  background-color: var(--btn-yellow);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 24px;
+  transition: background-color 200ms ease-in-out,
+    transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card .actions button:hover {
+  background-color: var(--btn-hover-yellow);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card .actions button:active {
+  background-color: var(--btn-active-yellow);
+  transform: scale(1);
+}
+
+.card .description {
+  text-align: justify;
+  color: var(--grey);
+}
+
